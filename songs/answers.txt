@@ -1,0 +1,28 @@
+1. Find the sum of the energy, valence, and dancibility of all songs combined. Divide by 300
+
+2. Even though this method is a good starting ground, it is not very representative in many
+ways.
+
+Firstly, the maximum score of each of the three factors differ from one another.
+For example, scores for 'valence' range from 0 to 1, while scores for 'dancibility' seem to
+always be negative. This causes the 3 factors to affect the overall 'Audio Aura' score
+to unequal and disproportionate extents.
+
+Hence, scores for each factor should be divided by its maximum score before the step in 1.
+is performed. If the range of values a factor could take is negative, we can add the value
+of the factor by a postive constant number such that the lower limit for the range is now 0,
+for every of the top 100 songs, before proceeding with the dividing of its respective maximum
+scores. However, if the 'Audio Aura' score is determined to be more reflective by differing
+importance from each of the 3 factors, each of the 3 factors may be multiplied by their
+respective predetermined proportional constants after the division by its maximum score.
+
+Secondly, not everyone might have covered at least 100 songs for this formulae to work.
+Assuming they do, listening times of different songs may differ significantly, especially
+when songs might have only been played once before being included in the top 100, or if
+the top few songs are played way more frequently than the others. Treating the data of all
+songs in the top 100 the same gives disproportional priority to songs lower on the list,
+skewing the reflectiveness of the resulting 'Audio Aura' score.
+
+Hence, we should take into account listening time for each song, multiplying it to the
+value of the respective score's 3 factor-included sum, diving by a constant, before summing
+all the resulting values for all songs up.
