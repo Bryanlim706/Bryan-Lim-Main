@@ -1,0 +1,21 @@
+sort1 uses: Bubble Sort
+
+How do you know?:
+- Time elapsed while running the sort1 programme differed greatly between the best and worst case of assortment of numbers possible, across a fixed amount of numbers inputted(n).
+Out of the 3 sorting algorithms, only bubble sort has differing big O and Omega too
+eg: sort1 reversed50000 (worst case, Big O) took 5.042 seconds. sort1 sorted50000(best case, Omega) took 0.405 seconds. Sort2 and sort3 had significantly less time disparity.
+
+
+sort2 uses: Merge Sort
+
+How do you know?:
+- As n increases, time elapsed while running the sort2 programme increases in an nlog(n) manner.
+regardless of best or worst case, as n increases, only merge sort time elapsed increases in nlog(n) manner too.
+eg: sort2 sorted5000 took 0.037s to run. sort10000 took 0.074s to run. sort50000 took 0.436 to run. This takes into account 2nd increase in n being 8 times larger than the first.
+
+
+sort3 uses: Selection Sort
+
+- How do you know?: As n increases, time elapsed while running the sort3 programme increases in an n^2 manner.
+regardless of best or worst case, as n increases, only selection sort time elapsed increses in a n^2 manner too.
+eg: sort 3 sorted5000 took 0.047s to run. sort10000 took 0.125s to run. sort 50000 took 2.147s to run
