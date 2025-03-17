@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <table class="table table-striped table-bordered table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>Current cash balance in USD</th>
+                <th>Grand total (i.e., stocks’ total value plus cash) in USD</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{current_cash_balance}}</td>
+                <td>{{grand_total}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+
+    <table class="table table-striped table-bordered table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>Stock owned</th>
+                <th>Number of shares owned</th>
+                <th>Current price of stock in USD</th>
+                <th>Total value in USD</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for stock, quantity, price, total in combined_data_1 %}
+            <tr>
+                <td>{{stock}}</td>
+                <td>{{quantity}}</td>
+                <td>{{price}}</td>
+                <td>{{total}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

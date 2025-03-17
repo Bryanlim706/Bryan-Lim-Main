@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <table class="table table-striped table-bordered table-hover">
+        <thead class="table-dark">
+            <tr>
+                <td>Date & time</td>
+                <td>Type</td>
+                <td>Stock</td>
+                <td>Price when bought/sold in USD</td>
+                <td>Number of shares bought/sold</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for date_time, type, stock, price_when_bought_sold, number_of_shares_bought_sold in combined_data %}
+            <tr>
+                <td>{{date_time}}</td>
+                <td>{{type}}</td>
+                <td>{{stock}}</td>
+                <td>{{price_when_bought_sold}}</td>
+                <td>{{number_of_shares_bought_sold}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

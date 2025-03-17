@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <form action="/sell" method="post">
+        <select name="symbol">
+            <option value="" disabled selected>Stock to sell</option>
+            {% for stock in stocks %}
+            <option value="{{stock}}">{{stock}}</option>
+            {% endfor %}
+        </select>
+        <input name="shares" type="number" placeholder="Number of shares">
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}
