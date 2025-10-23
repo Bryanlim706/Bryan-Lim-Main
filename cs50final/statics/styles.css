@@ -1,0 +1,162 @@
+/* Size for brand */
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+.nav-item
+{
+    position: relative;
+}
+.delete-btn
+{
+    position: absolute;
+    top: -20px;
+    right: 0;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    display: none; /* Hide delete button by default */
+}
+
+/* Show delete button on hover */
+.nav-item:hover .delete-btn
+{
+    display: block;
+}
+
+/* goals table */
+.goal-table
+{
+    width: 100%;
+    border-collapse: collapse;
+}
+.goal-table  th, td
+{
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+.goal-table th
+{
+    background-color: #f2f2f2;
+}
+.goal-table tr:nth-child(even)
+{
+    background-color: #f9f9f9;
+}
+.goal-table tr:hover
+{
+    background-color: #f1f1f1;
+}
+  /* Stylish table design */
+.stylish-table
+{
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.stylish-table th,
+.stylish-table td
+{
+    padding: 16px 20px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+    font-size: 16px;
+}
+
+.stylish-table th
+{
+    background-color: #4CAF50;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.stylish-table tr:nth-child(even)
+{
+    background-color: #f2f2f2;
+}
+
+.stylish-table tr:nth-child(odd)
+{
+    background-color: #C4A484
+}
+
+.stylish-table tr:hover
+{
+    background-color: #e9f5e9;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add_row_button {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #f44336;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 2px 2px 3px #999;
+    font-size: 36px;
+    line-height: 60px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: none;
+}
+.add_row_button:hover {
+    background-color: #d32f2f;
+}
+.submit_row_button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+submit_row_button:hover {
+    background-color: #45a049;
+}
+
+/* Hide delete button by default */
+.row_delete_btn {
+    display: none;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* Show delete button when hovering over the row */
+.goal_row:hover .row_delete_btn {
+    display: inline-block;
+}
