@@ -1,0 +1,14 @@
+{% extends "pre_layout.html" %}
+
+{% block title %}
+    Add category
+{% endblock %}
+
+{% block main %}
+<form action="/add_category" method="post">
+    <div class="mb-3">
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="category" placeholder="new category name" type="text">
+    </div>
+    <button class="btn btn-primary" type="submit">Add</button>
+</form>
+{% endblock %}

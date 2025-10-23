@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/styles.css" rel="stylesheet">
+    <title>{{ category_name }} - Task Manager</title>
+</head>
+<body style="background-image: url('static/background.jpg'); background-size: cover; background-repeat: no-repeat;">
+    <h1>{{ category_name }} Tasks</h1>
+
+    <!-- dynamically display tasks related to this category -->
+    <table class="stylish-table">
+        <thead>
+          <tr>
+            <th>Goal</th>
+            <th>Due date</th>
+            <th>Importance</th>
+            <th>Remarks</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for goal in goals %}
+              <tr class="goal_row">
+                  <td>{{ goal.goal }}</td>
+                  <td>{{ goal.due_date }}</td>
+                  <td>{{ goal.importance }}</td>
+                  <td>{{ goal.remarks }}</td>
+                  <td>{{ goal.status }}</td>
+                  <td></td>
+              </tr>
+          {% endfor %}
+              <form action="/added_row" method="post">
+                  <tr>
+                      <td><input name="goal" type="text" placeholder="goal" required></td>
+                      <td><input name="due_date" type="number" placeholder="dd/mm/yyyy" pattern="\d{2}/\d{2}/\d{4}" required></td>
+                      <td><input name="importance" type="number" placeholder="1 to 10" min="1" max="10" required></td>
+                      <td><input name="remarks" type="text" placeholder="remarks" required></td>
+                      <td><input name="status" list="optionsList" id="choices" name="choices" required></td>
+                  </tr>
+                  <input type="hidden" name="category_name" value={{category_name}}>
+                  <button class=submit_row_button type="submit">Add new row</button>
+                </form>
+        </tbody>
+    </table>
+    <a href="/">Back to Homepage</a>
+</body>
+<datalist id="optionsList">
+    <option value="not started">
+    <option value="in progress">
+    <option value="done">
+</datalist>
+</html>
