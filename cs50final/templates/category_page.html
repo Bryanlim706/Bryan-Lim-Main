@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/styles.css" rel="stylesheet">
+    <title>{{ category_name }} - Task Manager</title>
+</head>
+<body style="background-image: url('{{ url_for('static', filename='background.jpg') }}');
+             background-size: cover; background-repeat: no-repeat;">
+    <h1>{{ category_name }} Tasks</h1>
+
+    <!-- dynamically display tasks related to this category -->
+    <table class="stylish-table">
+        <thead style="border-bottom: 3px solid black;">
+          <tr>
+            <th>Goal</th>
+            <th>Due date</th>
+            <th>Importance</th>
+            <th>Remarks</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for goal in goals %}
+              <tr class="goal_row">
+                  <td>{{ goal.goal }}</td>
+                  <td>{{ goal.due_date }}</td>
+                  <td>{{ goal.importance }}</td>
+                  <td>{{ goal.remarks }}</td>
+                  <td>{{ goal.status }}</td>
+                  <td>
+                    <form method="post" action="/delete_row">
+                      <input type="hidden" name="category_name" value="{{category_name}}">
+                      <input type="hidden" name="goal" value="{{goal.goal}}">
+                      <input type="hidden" name="due_date" value="{{goal.due_date}}">
+                      <input type="hidden" name="importance" value="{{goal.importance}}">
+                      <input type="hidden" name="remarks" value="{{goal.remarks}}">
+                      <input type="hidden" name="status" value="{{goal.status}}">
+                      <button type="submit" class="row_delete_btn">Delete</button>
+                  </form>
+                  </td>
+              </tr>
+          {% endfor %}
+        </tbody>
+    </table>
+    <form action="/add_row" method="POST">
+        <input type="hidden" name="category_name" value="{{ category_name }}">
+        <button type="submit" class="add_row_button">+</button>
+    </form>
+    <a href="/">Back to Homepage</a>
+</body>
+</html>
