@@ -1,4 +1,5 @@
 # TASK AND GOAL MANAGER
+#### Note: Duplicated copy. Date of completion in original private repositary: 25/02/2025
 #### Video Demo:  https://youtu.be/e20eIceuj24
 #### Description:
 
