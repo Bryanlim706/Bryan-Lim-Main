@@ -41,3 +41,39 @@ def count_inversions(arr):
     return total_inversions
     
 print(count_inversions(arr))
+
+
+
+        min_heap[0], min_heap[-1] = min_heap[-1], min_heap[0]
+        largest_number = min_heap.pop()
+        insert_heapify_max(largest_number)
+
+        #heapify min_heap
+        parent_index = 0
+        while len(min_heap) >= ((parent_index * 2) + 1) + 1: #while not if no children nodes
+            left_index = (parent_index * 2) + 1
+            right_index = (parent_index * 2) + 2
+            left_child = min_heap[left_index]
+            if right_index < len(min_heap):
+                right_child = min_heap[right_index]
+            if len(min_heap) == right_index: #if one child node
+                if left_child > min_heap[parent_index]:
+                    min_heap[left_index], min_heap[parent_index] = min_heap[parent_index], min_heap[left_index]
+                    break
+            else: #if two child nodes
+                if min_heap[parent_index] >= left_child and min_heap[parent_index] >= right_child:
+                    break
+                else:
+                    if min_heap[parent_index] < left_child and min_heap[parent_index] > right_child:
+                        min_heap[left_index], min_heap[parent_index] = min_heap[parent_index], min_heap[left_index]
+                        parent_index = left_index #change parent
+                    elif min_heap[parent_index] > left_child and min_heap[parent_index] < right_child:
+                        min_heap[right_index], min_heap[parent_index] = min_heap[parent_index], min_heap[right_index]
+                        parent_index = right_index #change parent
+                    else:
+                        if left_child > right_child:
+                            min_heap[left_index], min_heap[parent_index] = min_heap[parent_index], min_heap[left_index]
+                            parent_index = left_index #change parent
+                        else:
+                            min_heap[right_index], min_heap[parent_index] = min_heap[parent_index], min_heap[right_index]
+                            parent_index = right_index #change parent
