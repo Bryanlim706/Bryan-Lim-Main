@@ -49,7 +49,40 @@ def insert_heapify_min(number):
 #balance heaps function
 def balance_heaps():
     if len(min_heap) > len(max_heap) + 1:
-        xx
+        min_heap[0], min_heap[-1] = min_heap[-1], min_heap[0]
+        largest_number = min_heap.pop()
+        insert_heapify_max(largest_number)
+
+        #heapify min_heap
+        parent_index = 0
+        while len(min_heap) >= ((parent_index * 2) + 1) + 1: #while not if no children nodes
+            left_index = (parent_index * 2) + 1
+            right_index = (parent_index * 2) + 2
+            left_child = min_heap[left_index]
+            if right_index < len(min_heap):
+                right_child = min_heap[right_index]
+            if len(min_heap) == right_index: #if one child node
+                if left_child > min_heap[parent_index]:
+                    min_heap[left_index], min_heap[parent_index] = min_heap[parent_index], min_heap[left_index]
+                    break
+            else: #if two child nodes
+                if min_heap[parent_index] >= left_child and min_heap[parent_index] >= right_child:
+                    break
+                else:
+                    if min_heap[parent_index] < left_child and min_heap[parent_index] > right_child:
+                        min_heap[left_index], min_heap[parent_index] = min_heap[parent_index], min_heap[left_index]
+                        parent_index = left_index #change parent
+                    elif min_heap[parent_index] > left_child and min_heap[parent_index] < right_child:
+                        min_heap[right_index], min_heap[parent_index] = min_heap[parent_index], min_heap[right_index]
+                        parent_index = right_index #change parent
+                    else:
+                        if left_child > right_child:
+                            min_heap[left_index], min_heap[parent_index] = min_heap[parent_index], min_heap[left_index]
+                            parent_index = left_index #change parent
+                        else:
+                            min_heap[right_index], min_heap[parent_index] = min_heap[parent_index], min_heap[right_index]
+                            parent_index = right_index #change parent
+                            
     elif len(max_heap) > len(min_heap) + 1:
         max_heap[0], max_heap[-1] = max_heap[-1], max_heap[0]
         largest_number = max_heap.pop()
