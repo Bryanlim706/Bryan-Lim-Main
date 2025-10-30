@@ -89,8 +89,6 @@ Open your web browser and go to:
 
 #### Note: This is a duplicated copy (25/02/2025)
 
----
-
 Thank you for reviewing my project!
 
 Bryan Lim
