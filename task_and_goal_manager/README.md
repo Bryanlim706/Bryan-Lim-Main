@@ -1,8 +1,8 @@
 # TASK AND GOAL MANAGER
 #### CS50x Final Project Author: Bryan Lim
 #### Note: Duplicated copy (25/02/2025)
+---
 #### Description:
-
 ##### Overview:
 For my CS50x final project, I coded a simple Task and Goal Manager web application. The aim of this application is to help users record and organise day-to-day tasks, as well as systematically track long-term goals. This application uses Python, Javascript, CSS, HTML, Flask, SQLite3, and Jinja2.
 
@@ -54,6 +54,36 @@ category_page.html is generated dynamically by app.py every time a new category 
 
 ###### add_row.html:
 add_row.html renders a page that allows the user to add an entry to the goals table in the category page. add_row.html can be rendered by pressing the plus button at the bottom right of the categories page. JavaScript also enables users to delete categories from the navigation bar.
+
+#### How to run this application:
+1. Clone the repository
+   ```bash
+   git clone https://github.com/<your-username>/<your-repository-name>.git
+   cd <your-repository-name>/task_and_goal_manager
+
+2. Set up a virtual environment (recommended)
+
+python -m venv venv
+source venv/bin/activate     # On macOS/Linux
+venv\Scripts\activate        # On Windows
+
+3. Install dependencies
+
+pip install -r requirements.txt
+
+4. Set environment variables
+
+export FLASK_APP=app.py
+export FLASK_ENV=development   # Optional: enables debug mode
+
+5. Run the Flask server
+
+flask run
+
+6. Access the app
+Open your web browser and go to:
+
+http://127.0.0.1:5000
 
 Thank you for reviewing my project!
 
