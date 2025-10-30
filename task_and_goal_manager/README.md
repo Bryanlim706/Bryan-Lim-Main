@@ -1,6 +1,6 @@
 # TASK AND GOAL MANAGER
 #### CS50x Final Project Author: Bryan Lim
-#### Note: Duplicated copy (25/02/2025) xx
+#### Note: Duplicated copy (25/02/2025)
 #### Description:
 
 ##### Overview:
