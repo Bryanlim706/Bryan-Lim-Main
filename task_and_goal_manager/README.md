@@ -1,9 +1,9 @@
 # TASK AND GOAL MANAGER
-#### Note: Duplicated copy. Date of completion in original private repositary: 25/02/2025
+#### Note: Duplicated copy (25/02/2025)
 #### Description:
 
 ##### Overview:
-A simple Task and Goal Manager web application. The aim of this application is to help users record and organise day to day tasks, as well as systematically record and track long term goals. This application uses Python, Javascript, CSS, HTML, Flask, SQLite3, and Jinja2.
+For my CS50x final project, I coded a simple Task and Goal Manager web application. The aim of this application is to help users record and organise day to day tasks, as well as systematically record and track long term goals. This application uses Python, Javascript, CSS, HTML, Flask, SQLite3, and Jinja2.
 
 ##### what each file contains and does:
 My project consists of a "static" directory, a "flask_session" directory, a "templates" directory, an app.py file, and afew micellaneous files, .
