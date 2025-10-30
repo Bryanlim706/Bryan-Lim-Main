@@ -54,3 +54,7 @@ category_page.html is generated dynamically by app.py every time a new category 
 
 ###### add_row.html:
 add_row.html renders a page that allows the user to add an entry to the goals table in the category page. add_row.html can be rendered by pressing the plus button at the bottom right of the categories page. JavaScript also enables users to delete categories from the navigation bar.
+
+Thank you for reviewing my project!
+
+Bryan Lim
