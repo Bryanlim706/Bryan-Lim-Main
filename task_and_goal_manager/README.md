@@ -1,4 +1,5 @@
 # TASK AND GOAL MANAGER
+#### CS50x Final Project Author: Bryan Lim
 #### Note: Duplicated copy (25/02/2025)
 #### Description:
 
@@ -9,7 +10,7 @@ For my CS50x final project, I coded a simple Task and Goal Manager web applicati
 My project consists of a "static" directory, a "flask_session" directory, a "templates" directory, an app.py file, and afew micellaneous files, .
 
 ##### static directory:
-The static direcotry contains the file which stores the background picture displayed across the entire application. It also contains styles.css and the js directory, used to contain javascript to make the elements on the static pages responsive.
+The static directory contains the file which stores the background picture displayed across the entire application. It also contains styles.css and the js directory, used to contain javascript to make the elements on the static pages responsive.
 
 ##### flask session directory:
 Since this application uses an account log-in log-out mechanism, flask session helps to contain all sessions in seperate files.
