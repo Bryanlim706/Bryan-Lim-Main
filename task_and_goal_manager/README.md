@@ -1,7 +1,5 @@
 # TASK AND GOAL MANAGER
 #### CS50x Final Project Author: Bryan Lim
-#### Note: Duplicated copy (25/02/2025)
----
 #### Description:
 ##### Overview:
 For my CS50x final project, I coded a simple Task and Goal Manager web application. The aim of this application is to help users record and organise day-to-day tasks, as well as systematically track long-term goals. This application uses Python, Javascript, CSS, HTML, Flask, SQLite3, and Jinja2.
@@ -86,6 +84,12 @@ add_row.html renders a page that allows the user to add an entry to the goals ta
 Open your web browser and go to:
    ```bash
    http://127.0.0.1:5000
+
+---
+
+#### Note: This is a duplicated copy (25/02/2025)
+
+---
 
 Thank you for reviewing my project!
 
