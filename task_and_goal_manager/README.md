@@ -55,6 +55,8 @@ category_page.html is generated dynamically by app.py every time a new category 
 ###### add_row.html:
 add_row.html renders a page that allows the user to add an entry to the goals table in the category page. add_row.html can be rendered by pressing the plus button at the bottom right of the categories page. JavaScript also enables users to delete categories from the navigation bar.
 
+---
+
 #### How to run this application:
 1. Clone the repository
    ```bash
@@ -62,28 +64,28 @@ add_row.html renders a page that allows the user to add an entry to the goals ta
    cd <your-repository-name>/task_and_goal_manager
 
 2. Set up a virtual environment (recommended)
-
-python -m venv venv
-source venv/bin/activate     # On macOS/Linux
-venv\Scripts\activate        # On Windows
+   ```bash
+   python -m venv venv
+   source venv/bin/activate     # On macOS/Linux
+   venv\Scripts\activate        # On Windows
 
 3. Install dependencies
-
-pip install -r requirements.txt
+   ```bash
+   pip install -r requirements.txt
 
 4. Set environment variables
-
-export FLASK_APP=app.py
-export FLASK_ENV=development   # Optional: enables debug mode
+   ```bash
+   export FLASK_APP=app.py
+   export FLASK_ENV=development   # Optional: enables debug mode
 
 5. Run the Flask server
-
-flask run
+   ```bash
+   flask run
 
 6. Access the app
 Open your web browser and go to:
-
-http://127.0.0.1:5000
+   ```bash
+   http://127.0.0.1:5000
 
 Thank you for reviewing my project!
 
