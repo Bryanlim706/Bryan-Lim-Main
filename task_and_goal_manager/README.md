@@ -2,7 +2,7 @@
 #### CS50x Final Project Author: Bryan Lim
 #### Description:
 ##### Overview:
-For my CS50x final project, I coded a simple Task and Goal Manager web application. The aim of this application is to help users record and organise day-to-day tasks, as well as systematically track long-term goals. This application uses Python, Javascript, CSS, HTML, Flask, SQLite3, and Jinja2.
+For my CS50x final project, I coded a simple full-stack Task and Goal Manager web application. The aim of this application is to help users record and organise day-to-day tasks, as well as systematically track long-term goals. This application uses Python, Javascript, CSS, HTML, Flask, SQLite3, and Jinja2.
 
 ##### What each file contains and does:
 My project consists of a "static" directory, a "flask_session" directory, a "templates" directory, an app.py file, and a few miscellaneous files.
