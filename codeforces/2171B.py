@@ -5,13 +5,25 @@ for case in range(cases):
     new_arr = [None] * (length)
     for i in range(length):
         if (i == 0 or i == length - 1) and arr[i] == -1:
-            new_arr[i] == None
+            new_arr[i] = None
         else:
             if arr[i] != -1:
                 new_arr[i] = arr[i]
-            else: 
+            else:
                 new_arr[i] = 0
-    if new_arr[-1] == None and new_arr[0] != None:
+    if length < 3:
+        if new_arr[-1] == None and new_arr[0] == None:
+            new_arr[0] = 0
+            new_arr[-1] = 0
+        elif new_arr[-1] != None and new_arr[0] == None:
+            new_arr[0] = new_arr[-1]
+        elif new_arr[-1] == None and new_arr[0] != None:
+            new_arr[-1] = new_arr[0]
+
+
+
+
+    elif new_arr[-1] == None and new_arr[0] != None:
         sum = 0
         for j in range(length - 2):
             sum += new_arr[j + 1] - new_arr[j]
@@ -41,6 +53,7 @@ for case in range(cases):
         else:
             new_arr[0] = 0
             new_arr[-1] = -1 * sum
+           
     final_sum = 0
     for k in range(length - 1):
         final_sum += new_arr[k + 1] - new_arr[k]
