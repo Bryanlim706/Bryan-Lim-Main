@@ -14,7 +14,7 @@ for case in range(cases):
             counter += 1
     #splice elements which = alice number
     new_arr = []
-    for _ in range(length):
+    for i in range(length):
         if arr[i] != alice_number:
             new_arr.append(arr[i])
     new_length = len(new_arr)
